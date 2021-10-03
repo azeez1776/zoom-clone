@@ -1,13 +1,17 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Header from '../components/Header'
+import ContactMenu from '../components/ContactMenu'
+import MenuButtons from '../components/MenuButtons'
+import SearchBar from '../components/SearchBar'
 
 const Home = () => {
     return (
         <View>
-            {/* Header */}
-            {/* Search bar */}
-            {/* Button Menu */}
-            {/* Contact Menu */}
+            <Header />
+            <SearchBar />
+            <MenuButtons />
+            <ContactMenu />
         </View>
     )
 }
