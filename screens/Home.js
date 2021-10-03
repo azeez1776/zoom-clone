@@ -7,8 +7,8 @@ import SearchBar from '../components/SearchBar'
 
 const Home = () => {
     return (
-        <View>
-            <SafeAreaView>
+        <View style={styles.container}>
+            <SafeAreaView style={{ height: '100%' }}>
                 <Header />
                 <SearchBar />
                 <MenuButtons />
@@ -18,6 +18,11 @@ const Home = () => {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#1c1c1c',
+        padding: 15
+    }
+})
 
 export default Home
