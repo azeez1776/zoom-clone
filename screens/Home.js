@@ -4,7 +4,10 @@ import { StyleSheet, Text, View } from 'react-native'
 const Home = () => {
     return (
         <View>
-            <Text>Home</Text>
+            {/* Header */}
+            {/* Search bar */}
+            {/* Button Menu */}
+            {/* Contact Menu */}
         </View>
     )
 }
