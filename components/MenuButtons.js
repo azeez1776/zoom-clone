@@ -32,7 +32,7 @@ const MenuButtons = () => {
         <View style={styles.container}>
             {items.map((item, id) => {
                 return (
-                    <View style={styles.btnContainer}>
+                    <View key={id} style={styles.btnContainer}>
                         <TouchableOpacity
                             style={{ ...styles.button, backgroundColor: item.customColor ?? "#0470dc" }}
                         >
