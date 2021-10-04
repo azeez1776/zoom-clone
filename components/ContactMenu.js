@@ -1,18 +1,54 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const ContactMenu = () => {
+
+
+    const contacts = [
+        {
+            type: "starred",
+            name: "starred"
+        },
+        {
+            type: "contact",
+            name: "samatar",
+            photo: require("../assets/three.png")
+        },
+        {
+            type: "contact",
+            name: "abdi",
+            photo: require("../assets/two.jpg")
+        },
+        {
+            type: "contact",
+            name: "aboud",
+            photo: require("../assets/one.jpeg")
+        }
+    ];
+
     return (
         <View style={styles.container}>
-            <View style={styles.row}>
-                <View style={styles.starredIcon}>
-                    <AntDesign name="star" size={23} color="#efefef" />
-                </View>
-                <Text style={styles.text}>
-                    Starred
-                </Text>
-            </View>
+            {contacts.map((contact, index) => {
+                return (
+                    <View key={index} style={styles.row}>
+                        {contact.type === "starred" ?
+                            (
+                                <View style={styles.starredIcon}>
+                                    <AntDesign name="star" size={23} color="#efefef" />
+                                </View>
+
+                            ) :
+                            (
+                                <Image source={contact.photo} style={styles.image} />
+                            )
+                        }
+                        <Text style={styles.text}>
+                            {contact.name}
+                        </Text>
+                    </View>
+                )
+            })}
         </View>
     )
 }
@@ -35,6 +71,11 @@ const styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 15,
         fontSize: 15
+    },
+    image: {
+        width: 55,
+        height: 55,
+        borderRadius: 20
     }
 })
 
