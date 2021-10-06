@@ -1,12 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TextInput } from 'react-native'
 import { createStackNavigation } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 
 const MeetingRoom = () => {
     return (
         <View>
-            <Text></Text>
+            <TextInput/>
+            <TextInput/>
         </View>
     )
 }
