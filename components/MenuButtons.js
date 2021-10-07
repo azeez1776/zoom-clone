@@ -28,7 +28,7 @@ const MenuButtons = ({ navigation }) => {
         }
     ];
 
-    const openMeeting = () => navigation.navgate('Meeting Room')
+    const openMeeting = () => navigation.navigate('Meeting Room')
 
     return (
         <View style={styles.container}>
