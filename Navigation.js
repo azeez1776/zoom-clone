@@ -17,10 +17,20 @@ const Navigation = () => {
                 <Stack.Screen
                     name="Home"
                     component={Home}
+                    options={{
+                        headerShown: false
+                    }}
                 />
                 <Stack.Screen
                     name="Meeting Room"
                     component={MeetingRoom}
+                    options={{
+                        title: 'Start a Meeting',
+                        headerStyle: {
+                            backgroundColor: '#1c1c1c'
+                        },
+                        headerTintColor: 'white'
+                    }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
