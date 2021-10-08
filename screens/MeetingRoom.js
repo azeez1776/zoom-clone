@@ -7,6 +7,10 @@ const MeetingRoom = () => {
     const [name, setName] = useState('');
     const [roomID, setRoomID] = useState('');
 
+    const startMeeting = () => {
+
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.startMeetingContainer}>
@@ -28,9 +32,12 @@ const MeetingRoom = () => {
                         placeholderTextColor="#767476"
                     />
                 </View>
-                <View style={styles.btn}>
-                    <TouchableOpacity>
-
+                <View style={styles.buttonView}>
+                    <TouchableOpacity
+                        onPress={startMeeting}
+                        style={styles.btn}
+                    >
+                        <Text style={{ color: 'white', fontWeight: 'bold' }}>Start Meeting</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -56,6 +63,18 @@ const styles = StyleSheet.create({
     textInput: {
         backgroundColor: '#373538',
         fontSize: 18
+    },
+    buttonView: {
+        alignItems: 'center'
+    },
+    btn: {
+        backgroundColor: '#0470DC',
+        width: 350,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20,
+        borderRadius: 15
     }
 
 
