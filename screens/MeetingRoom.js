@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     },
     textInput: {
         backgroundColor: '#373538',
-        fontSize: 18
+        fontSize: 18,
+        color: 'white'
     },
     buttonView: {
         alignItems: 'center'
