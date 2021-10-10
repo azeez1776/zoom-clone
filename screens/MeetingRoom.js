@@ -17,8 +17,8 @@ const MeetingRoom = () => {
                 <View style={styles.info}>
                     <TextInput
                         style={styles.textInput}
-                        value={name}
-                        onChangeText={text => setName(text)}
+                        value={roomID}
+                        onChangeText={text => setRoomID(text)}
                         placeholder={'Enter your name'}
                         placeholderTextColor="#767476"
                     />
@@ -28,7 +28,7 @@ const MeetingRoom = () => {
                         style={styles.textInput}
                         value={name}
                         onChangeText={text => setName(text)}
-                        placeholder={'Enter your name'}
+                        placeholder={'Enter Room ID'}
                         placeholderTextColor="#767476"
                     />
                 </View>
