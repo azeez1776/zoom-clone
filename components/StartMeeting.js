@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 
-const StartMeeting = ({ name, roomID, setName, setRoomID }) => {
+const StartMeeting = ({ name, roomID, setName, setRoomID, joinRoom }) => {
     return (
         <View>
             <View style={styles.startMeetingContainer}>
@@ -25,7 +25,7 @@ const StartMeeting = ({ name, roomID, setName, setRoomID }) => {
                 </View>
                 <View style={styles.buttonView}>
                     <TouchableOpacity
-                        onPress={startMeeting}
+                        onPress={joinRoom}
                         style={styles.btn}
                     >
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Start Meeting</Text>
