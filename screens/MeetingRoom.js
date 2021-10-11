@@ -6,12 +6,14 @@ import StartMeeting from '../components/StartMeeting';
 
 const MeetingRoom = () => {
 
+    let socket;
+
     const [name, setName] = useState('');
     const [roomID, setRoomID] = useState('');
 
     useEffect(() => {
         const API_URL = 'http://c250-196-249-97-238.ngrok.io/';
-        const socket = io(API_URL);
+        socket = io(API_URL);
         socket.on('connection', () => {
             console.log('connected');
         })
@@ -28,6 +30,7 @@ const MeetingRoom = () => {
                 roomID={roomID}
                 setName={setName}
                 setRoomID={setRoomID}
+                joinRoom={joinRoom}
             />
         </View>
     )
