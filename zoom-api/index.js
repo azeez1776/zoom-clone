@@ -17,6 +17,10 @@ const getUsers = (roomID) => {
     return users.filter(user => (user.roomID == roomID))
 }
 
+const userLeave = (userName) => {
+    users = users.filter(user => (user.userName != userName))
+}
+
 app.get('/', (req, res) => {
     res.send('Hello World')
 });
@@ -32,6 +36,13 @@ io.on("connection", socket => {
         socket.to(roomID).emit('user-connected', userName)
 
         io.to(roomID).emit('all-users', getUsers(roomID))
+
+        socket.on('disconnet', () => {
+            console.log('Disconnected');
+            socket.leave(roomID);
+            userLeave(userName);
+            io.to(roomID).emit('all-users', getUsers(roomID))
+        })
     })
 })
 
