@@ -10,7 +10,7 @@ const MeetingRoom = () => {
     const [roomID, setRoomID] = useState('');
 
     useEffect(() => {
-        const API_URL = 'http://localhost:3001/';
+        const API_URL = 'http://c250-196-249-97-238.ngrok.io/';
         const socket = io(API_URL);
         socket.on('connection', () => {
             console.log('connected');
