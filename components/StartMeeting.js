@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 
 const StartMeeting = ({ name, roomID, setName, setRoomID }) => {
     return (
