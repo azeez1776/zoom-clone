@@ -3,13 +3,17 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import { io } from 'socket.io-client';
 import StartMeeting from '../components/StartMeeting';
 
+let socket;
 
 const MeetingRoom = () => {
 
-    let socket;
 
     const [name, setName] = useState('');
     const [roomID, setRoomID] = useState('');
+
+    const joinRoom = () => {
+        socket.emit('join-room', { roomID: roomID, userName: name })
+    }
 
     useEffect(() => {
         const API_URL = 'http://c250-196-249-97-238.ngrok.io/';
@@ -18,10 +22,6 @@ const MeetingRoom = () => {
             console.log('connected');
         })
     }, [])
-
-    const joinRoom = () => {
-        socket.emit('join-room', { roomID: roomID, userName: name })
-    }
 
     return (
         <View style={styles.container}>
