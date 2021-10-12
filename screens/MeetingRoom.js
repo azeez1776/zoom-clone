@@ -35,7 +35,7 @@ const MeetingRoom = () => {
 
     const [name, setName] = useState('');
     const [roomID, setRoomID] = useState('');
-    const [activeUsers, setActiveUsers] = useState(['mariki', 'tony']);
+    const [activeUsers, setActiveUsers] = useState([]);
     const [startCamera, setStartCamera] = useState(false);
 
     const joinRoom = () => {
@@ -82,7 +82,7 @@ const MeetingRoom = () => {
                                 {activeUsers.map((user, id) => {
                                     return (
                                         <View style={styles.userView} key={id}>
-                                            <Text style={styles.textUser}>{user}</Text>
+                                            <Text style={styles.textUser}>{user.userName}</Text>
                                         </View>
                                     )
                                 })}
