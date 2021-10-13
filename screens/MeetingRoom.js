@@ -73,8 +73,8 @@ const MeetingRoom = () => {
                                 <Camera
                                     type="front"
                                     style={{
-                                        width: activeUsers === 0 ? '100%' : 200,
-                                        height: activeUsers === 0 ? 600 : 200
+                                        width: activeUsers <= 1 ? '100%' : 200,
+                                        height: activeUsers <= 1 ? 600 : 200
                                     }}
                                 />
                             </View>
